@@ -54,5 +54,21 @@ namespace Infrastructure
                  }).FirstOrDefault();
             return movie;
         }
+
+        public Movie UpdateMovie(Movie movie)
+        {
+            _movieDbContext.Movies.Update(movie);
+            _movieDbContext.SaveChanges();
+
+            return movie;
+        }
+
+        public Movie DeleteMovie(Movie movie)
+        {
+            _movieDbContext.Movies.Remove(movie);
+            _movieDbContext.SaveChanges();
+
+            return movie;
+        }
     }
 }

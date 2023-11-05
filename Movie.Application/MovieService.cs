@@ -22,6 +22,12 @@ namespace Application
             return movie;
         }
 
+        public Movie DeleteMovie(Movie movie)
+        {
+            _movieRepository.DeleteMovie(movie);
+            return movie;
+        }
+
         public List<Movie> GetAllMovies()
         {
             var movies = _movieRepository.GetAllMovies();
@@ -32,6 +38,12 @@ namespace Application
         {
             var movies = _movieRepository.GetMovieById(Id);
             return movies;
+        }
+
+        public Movie UpdateMovie(Movie movie)
+        {
+            _movieRepository.UpdateMovie(movie);
+            return movie;
         }
     }
 }

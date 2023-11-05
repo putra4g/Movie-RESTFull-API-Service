@@ -14,5 +14,9 @@ namespace Application
         Movie CreateMovie(Movie movie);
 
         Movie GetMovieById(int Id);
+
+        Movie UpdateMovie(Movie movie);
+
+        Movie DeleteMovie(Movie movie);
     }
 }

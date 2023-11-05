@@ -12,5 +12,7 @@ namespace Application
         List<Movie> GetAllMovies();
         Movie CreateMovie(Movie movie);
         Movie GetMovieById(int Id);
+        Movie UpdateMovie(Movie movie);
+        Movie DeleteMovie(Movie movie);
     }
 }
