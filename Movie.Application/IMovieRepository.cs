@@ -10,5 +10,7 @@ namespace Application
     public interface IMovieRepository
     {
         List<Movie> GetAllMovies();
+        Movie CreateMovie(Movie movie);
+        Movie GetMovieById(int Id);
     }
 }

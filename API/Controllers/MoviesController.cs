@@ -27,15 +27,18 @@ namespace API.Controllers
 
         // GET api/<MoviesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult<List<Movie>> GetDetailMovie(int id)
         {
-            return "value";
+            var movie = _service.GetMovieById(id);
+            return Ok(movie);
         }
 
         // POST api/<MoviesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Movie> PostMovie(Movie movie)
         {
+            var Movie = _service.CreateMovie(movie);
+            return Ok(Movie);
         }
 
         // PUT api/<MoviesController>/5
