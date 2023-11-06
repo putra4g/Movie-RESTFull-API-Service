@@ -40,6 +40,12 @@ namespace Application
             return movies;
         }
 
+        public Movie GetMovieByName(string Name)
+        {
+            var movies = _movieRepository.GetMovieByName(Name);
+            return movies;
+        }
+
         public Movie UpdateMovie(Movie movie)
         {
             _movieRepository.UpdateMovie(movie);

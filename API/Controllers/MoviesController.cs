@@ -80,5 +80,17 @@ namespace API.Controllers
 
             return Ok("delete success");
         }
+
+        // GET api/<MoviesController>/GetDetailMovieByName/{movieName}
+        [HttpGet("GetDetailMovieByName/{movieName}")]
+        public ActionResult<Movie> GetDetailMovieByName(string movieName)
+        {
+            var movie = _service.GetMovieByName(movieName);
+            if (movie == null)
+            {
+                return NotFound($"no Movie with name : {movieName} was found");
+            }
+            return Ok(movie);
+        }
     }
 }

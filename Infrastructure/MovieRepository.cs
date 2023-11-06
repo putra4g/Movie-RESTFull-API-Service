@@ -70,5 +70,21 @@ namespace Infrastructure
 
             return movie;
         }
+
+        public Movie GetMovieByName(string Name)
+        {
+            var movie = _movieDbContext.Movies.Where(c => c.Title.Contains(Name))
+                 .Select(x => new Movie
+                 {
+                     Id = x.Id,
+                     Title = x.Title,
+                     Description = x.Description,
+                     Rating = x.Rating,
+                     Image = x.Image,
+                     Created_At = x.Created_At,
+                     Updated_At = x.Updated_At
+                 }).FirstOrDefault();
+            return movie;
+        }
     }
 }
