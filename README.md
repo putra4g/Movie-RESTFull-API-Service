@@ -15,10 +15,10 @@ A little intro about the installation.
 * change mysql connectionstring into your mysql envy config on **Project API > appsettings.json**
 ```
 "ConnectionStrings": {
-  "DefaultConnection": "server=localhost;user=root;database=Moviedb;password=**********;"
+  "DefaultConnection": "server=localhost;user=<change to your user/root>;database=Moviedb;password=<input password>;"
 }
 ```
-* open Package Manager Console, for creating object to database. type & run command : "**update-database**" 
+* open  (Tools > NuGet Package Manager > Package Manager Console). for creating object to database. type & run command : "**update-database**" 
 * Set API Project as start up
 * Running web API
-* You can see the API documentation on Swagger, or execute also.
+* You can see the API documentation on Swagger, or direct execute also.
